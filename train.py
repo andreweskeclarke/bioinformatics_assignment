@@ -9,8 +9,7 @@ import scipy
 import collections
 
 from mass_calc import *
-from isoelectric_calc import *
-from statsmodels.tools import categorical
+mrom statsmodels.tools import categorical
 from sklearn.linear_model import *
 from sklearn.ensemble import *
 from sklearn.svm import *
@@ -54,6 +53,10 @@ def train_model(model, train_input, train_output, validate_input, validate_outpu
   accuracy = sum(predictions == validate_output) / predictions.shape[0]
   print(accuracy)
   return accuracy
+
+
+def percent(amino_acid, sequence):
+  return sequence.count(amino_acid) # / len(sequence)
 
 
 def generate_features_and_experiments(start, sequences, sequence_locs):

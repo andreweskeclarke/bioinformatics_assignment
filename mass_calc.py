@@ -33,9 +33,3 @@ MASSES =  {
 def calc_mass(sequence):
   return sum([MASSES[a] for a in sequence])
 
-def percent(amino_acid, sequence):
-  return sequence.count(amino_acid) # / len(sequence)
-
-def percent_pair(pair, sequence):
-  return sequence.count(pair) # / (len(sequence) - 1)
-
